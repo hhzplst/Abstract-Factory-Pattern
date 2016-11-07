@@ -1,7 +1,7 @@
 public abstract class Computer {
   String name;
 
-  void setName(String name) {
+  public void setName(String name) {
     this.name = name;
   }
 
@@ -9,23 +9,31 @@ public abstract class Computer {
     return name;
   }
 
-  void buildCase() {
+  private void buildCase() {
     System.out.println("Building case...");
   }
 
-  void addMotherboard() {
+  private void addMotherboard() {
     System.out.println("Adding Motherboard...");
   }
 
-  void addCPU() {
+  private void addCPU() {
     System.out.println("Adding CPU...");
   }
 
-  void addMemory() {
+  private void addMemory() {
     System.out.println("Adding Memory...");
   }
 
-  void addHardDrive() {
+  private void addHardDrive() {
     System.out.println("Adding Hard Drive...");
+  }
+
+  public void assemble() {
+    buildCase();
+    addMotherboard();
+    addCPU();
+    addMemory();
+    addHardDrive();
   }
 }
