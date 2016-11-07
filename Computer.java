@@ -1,5 +1,13 @@
 public abstract class Computer {
+
+  ComputerComponentFactory factory;
+
   String name;
+  CPU cpu;
+  Memory memory;
+  Motherboard motherboard;
+  HardDrive hardDrive;
+  Case deviceCase;
 
   public void setName(String name) {
     this.name = name;
@@ -36,4 +44,6 @@ public abstract class Computer {
     addMemory();
     addHardDrive();
   }
+
+  abstract void prepare();
 }
