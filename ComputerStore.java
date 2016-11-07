@@ -13,6 +13,9 @@ public abstract class ComputerStore {
 
   public Computer orderComputer(String quality) {
     Computer computer = createComputer(quality);
+    computer.assemble();
+    System.out.printf("Here's the %s you ordered", computer.getName());
+    return computer;
   }
 
 }
